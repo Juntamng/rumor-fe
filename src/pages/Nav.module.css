@@ -1,0 +1,12 @@
+.menuContainer {
+    /* border: 1px green solid; */
+    margin: 10px 5px;
+}
+
+.menuItem {
+    background-color: var(--nav-item-bg);
+    color: var(--nav-item-text);
+    margin: 8px 3px;   
+    border-radius: 5px;
+    padding: 3px 5px;
+}

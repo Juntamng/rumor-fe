@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+:root {
+  /* light Mode */
+  --bg-light: #fff;
+  --nav-bg-light: rgb(243, 243, 243);
+  --nav-item-bg-light: rgb(201, 201, 201);
+  --nav-item-text-light: rgb(66, 66, 66);
+  --font-color-light: rgb(66, 66, 66);
+  
+  /* dart Mode */
+  --bg-dark: #000;
+  --nav-bg-dark: rgb(71, 71, 71);
+  --nav-item-bg-dark: rgb(238, 238, 238);
+  --nav-item-text-dark: rgb(66, 66, 66);
+  --font-color-dark: rgb(239, 239, 239);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root[color-scheme="light"] {
+  --bg: var(--bg-light);
+  --font-color: var(--font-color-light);
+  --nav-bg: var(--nav-bg-light);
+  --nav-item-bg: var(--nav-item-bg-light);
+  --nav-item-text: var(--nav-item-text-light);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root[color-scheme="dark"] {
+  --bg: var(--bg-dark);
+  --font-color: var(--font-color-dark);
+  --nav-bg: var(--nav-bg-dark);
+  --nav-item-bg: var(--nav-item-bg-dark);
+  --nav-item-text: var(--nav-item-text-dark);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: var(--font-color);
+}
+
+body {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+  display: flex;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div {
+  /* border: 1px orange solid; */
 }
