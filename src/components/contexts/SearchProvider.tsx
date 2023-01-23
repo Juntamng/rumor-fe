@@ -90,7 +90,8 @@ const SearchProvider: React.FC<SearchProviderProps> = ({ children }) => {
         // });
 
         // const arr: record[] = []
-        const res = await axios.get(`http://localhost:8000/?page=${page}&query=${query}`)
+        const host = "https://rumor-be-juntamng.vercel.app/"
+        const res = await axios.get(`${host}?page=${page}&query=${query}`)
      
         setData(res.data)
         setDataset(res.data)
